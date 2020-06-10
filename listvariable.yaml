@@ -1,0 +1,9 @@
+- hosts: linux
+  vars:
+    games: [cricket, football, tennis, rugby]
+  tasks:
+  - name: printlist variable
+    debug:
+      msg: " {{ item }} "
+    with_items:
+      - "{{ games }}" 
